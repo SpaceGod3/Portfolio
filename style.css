@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+  }
+  :root {
+    --main-font-family: "Roboto", sans-serif;
+    --secondary-font-family: "Poppins", sans-serif;
+  }
+  body {
+    margin: 0;
+    height: 100%;
+  }
+  p,
+  ul,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  body {
+    font-family: var(--main-font-family);
+    font-weight: 400;
+  }
+  /* global components */
+  .date {
+    font-family: var(--secondary-font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #999999;
+  }
+  .title {
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    color: #42489e;
+  
+    display: flex;
+    gap: 46px;
+    align-items: center;
+  }
+  
+  .title--medium {
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    color: #000000;
+  }
+  
+  .ball {
+    display: block;
+    width: 74px;
+    height: 74px;
+    background-color: #42489e;
+    border-radius: 50%;
+  
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .outer-ball {
+    width: 40px;
+    height: 40px;
+    background-color: #eae7e7;
+    border-radius: 50%;
+  
+    /* align inner ball */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inner-ball {
+    width: 20px;
+    height: 20px;
+    background-color: #42489e;
+    border-radius: 50%;
+  }
+  
+  .description {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #666666;
+  }
+  
+  .content {
+    display: flex;
+    height: 100%;
+  }
+  .main-content {
+    width: 62%;
+    padding-top: 153px;
+    padding-left: 154px;
+    padding-right: 125px;
+  }
+  .side-content {
+    width: 38%;
+    background: linear-gradient(180deg, #6d5da8 0%, #43479e 100%);
+  }
+  
+  /* Hero */
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+  .hero__img {
+    width: 330px;
+    height: auto;
+  }
+  .hero__img img {
+    width: 100%;
+    height: auto;
+  }
+  .hero__name {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 34px;
+    letter-spacing: 0.005em;
+    color: #666666;
+    margin-bottom: 15px;
+  }
+  .hero__name-highlight {
+    font-weight: 900;
+    color: #42489e;
+  }
+  .hero__job-title {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.005em;
+    color: #666666;
+    margin-bottom: 25px;
+  }
+  .hero__contacts-list,
+  .hero__link {
+    list-style: none;
+  
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    color: #666666;
+    text-decoration: none;
+  }
+  .hero__contacts-list {
+    padding-left: 55px;
+  }
+  .hero__contact-item {
+    margin-bottom: 8px;
+    position: relative;
+  }
+  
+  .hero__contact-item::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+  
+    position: absolute;
+    left: -55px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .hero__contact-item:nth-child(1)::before {
+    background-image: url(./img/mobile.png);
+  }
+  .hero__contact-item:nth-child(2)::before {
+    background-image: url(./img/letter.png);
+  }
+  .hero__contact-item:nth-child(3)::before {
+    background-image: url(./img/phone.png);
+  }
+  .hero__contact-item:nth-child(4)::before {
+    background-image: url(./img/marker.png);
+  }
+  /* GAME-EXPERIENCE */
+  .game-experience {
+    margin-top: 55px;
+    margin-bottom: 53px;
+  }
+  .game-experience__list,
+  .education__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .game-experience__title,
+  .education__title {
+    margin-bottom: 35px;
+  }
+  .game-experience__title .ball {
+    background-image: url(./img/bag.png);
+  }
+  .game-experience__list-subtitle {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #9b9b9b;
+    margin-bottom: 20px;
+  }
+  
+  .game-experience__list-description {
+    max-width: 480px;
+  }
+  .education__list-description {
+    padding-left: 55px;
+  }
+  
+  .game-experience__list-item-row-top,
+  .education__list-item-row-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: -34px;
+  }
+  .game-experience__list-item-row-middle {
+    padding-left: 70px;
+  }
+  /* EDUCATION */
+  .education__title .ball {
+    background-image: url(./img/hat.png);
+  }
+  .education__list-item-row-top {
+    margin-bottom: 20px;
+  }
+  .education {
+    padding-left: 34px;
+  }
+  .education__list-item-row-middle {
+    padding-left: 15px;
+  }
+  /* Hobbies */
+  .hobbies {
+    margin-top: 30px;
+    padding-left: 34px;
+    padding-bottom: 80px;
+  }
+  .hobbies__title .ball {
+    background-image: url(./img/icon-hobby.png);
+  }
+  .hobbies__title {
+    margin-bottom: 20px;
+  }
+  
+  .hobbies-description {
+    padding-left: 75px;
+  }
+  /* aside */
+  .container {
+    width: 75%;
+    margin-inline: auto;
+  }
+  .side-content .description {
+    color: white;
+  }
+  .side-content .title {
+    color: white;
+  }
+  .progress__bar {
+    height: 10px;
+    background-color: #877dba;
+    width: 80%;
+  }
+  .progress_progress {
+    background-color: #bbb5db;
+    width: 60%;
+    height: 10px;
+  }
+  
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .main-content {
+      padding-left: 35px;
+      padding-right: 35px;
+      padding-top: 50px;
+    }
+  
+    .hero__name {
+      font-size: 24px;
+      line-height: 26px;
+    }
+    .hero__job-title {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 15px;
+    }
+    .hero__link {
+      font-size: 14px;
+      line-height: 15px;
+    }
+    .ball {
+      width: 55px;
+      height: 55px;
+    }
+  
+    .game-experience__title .ball,
+    .education__title .ball,
+    .hobbies__title .ball {
+      background-size: 25px;
+    }
+    .title {
+      font-size: 25px;
+      line-height: 25px;
+      gap: 30px;
+    }
+  
+    .game-experience__list {
+      padding-left: 55px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero {
+      flex-direction: column-reverse;
+    }
+    .hero__name,
+    .hero__job-title {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 375px){
+      .main-content{
+        width: 100%;
+      }
+      .ball{
+          width: 20px;
+          height: 20px;
+      }
+      .outer-ball{
+        width: 31px;
+        height: 30px;
+      }
+      
+      .title {
+        font-size: 20px;
+        line-height: 15px;
+        margin-left: 10px;
+      }
+      .title--medium{
+        font-size: 15px;
+        line-height: 15px; 
+      }
+      .date{
+          font-size: 10px;
+      }
+      .game-experience__list-subtitle{
+        font-size: 9px;
+      }
+  }
+  @media screen and (max-width:1024px){
+    .main-content{
+        width: 48%;
+      }
+    .side-content{
+        padding-right: 90px;
+    }
+    .ball{
+        width: 20px;
+        height: 20px;
+    }
+    .outer-ball{
+      width: 31px;
+      height: 30px;
+    }
+    
+    .title {
+      font-size: 20px;
+      line-height: 15px;
+      margin-left: 10px;
+    }
+    .title--medium{
+      font-size: 15px;
+      line-height: 15px; 
+    }
+    .date{
+        font-size: 10px;
+    }
+    .game-experience__list-subtitle{
+      font-size: 9px;
+    }
+  }
